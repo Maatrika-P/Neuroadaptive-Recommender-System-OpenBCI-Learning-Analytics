@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 from sklearn.cluster import KMeans
 from flask import Flask, request, jsonify
+import openbci 
 
 app = Flask(__name__)
 
@@ -74,11 +75,17 @@ def recommendations_api():
     response = {'recommendations': recommendation}
     return jsonify(response)
 
+
 def retrieve_eeg_data(user_id):
-    # Example code to retrieve EEG data from a data source
-    # Replace with your own implementation
-    eeg_data = np.random.rand(100, 10)  # Placeholder for retrieved EEG data
+    board = openbci.OpenBCIBoard(port='COM3')  # Replace 'COM3' with the correct port for your OpenBCI device
+    board.start_streaming()  # Start streaming EEG data
+    eeg_data = []
+    for _ in range(100):  # Retrieve 100 samples of EEG data
+        sample = board.get_sample()
+        eeg_data.append(sample.channels)  # Store the EEG data channels
+    board.stop_streaming()  # Stop streaming EEG data
     return eeg_data
+
 
 def extract_cognitive_features(eeg_data):
     # Example code to extract cognitive features from EEG data

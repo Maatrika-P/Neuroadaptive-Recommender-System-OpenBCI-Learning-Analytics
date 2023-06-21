@@ -6,8 +6,6 @@ This project aims to develop a neuroadaptive recommender system that leverages O
 
 This project is an example layout for building a neuroadaptive recommender system for personalized learning experiences using OpenBCI and learning analytics.
 
-**Note: This README serves as an example layout and should be customized to fit your specific project.**
-
 
 ## Block Diagram
 

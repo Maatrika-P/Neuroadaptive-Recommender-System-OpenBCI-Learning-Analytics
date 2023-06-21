@@ -8,6 +8,12 @@ This project is an example layout for building a neuroadaptive recommender syste
 
 **Note: This README serves as an example layout and should be customized to fit your specific project.**
 
+
+## Block Diagram
+
+https://www.canva.com/design/DAFmetSsxDQ/XF4uzwe3xR3Xnv7H-JtIrg/edit?utm_content=DAFmetSsxDQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
 ## Tech Stack
 
 - Frontend Development: Streamlit 🖥️

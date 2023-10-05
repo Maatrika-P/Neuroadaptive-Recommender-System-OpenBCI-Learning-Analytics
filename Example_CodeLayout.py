@@ -60,6 +60,7 @@ def predict_cognitive_state_api():
     # Return the predicted cognitive state as the API response
     response = {'cognitive_state': cognitive_state.tolist()}
     return jsonify(response)
+    
 
 # API Endpoint for Personalized Recommendations
 @app.route('/recommendations', methods=['POST'])

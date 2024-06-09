@@ -78,7 +78,7 @@ def recommendations_api():
 
 
 def retrieve_eeg_data(user_id):
-    board = openbci.OpenBCIBoard(port='COM3')  # Replace 'COM3' with the correct port for your OpenBCI device
+    board = openbci.OpenBCIBoard(port='COM6')  # Replace 'COM3' with the correct port for your OpenBCI device
     board.start_streaming()  # Start streaming EEG data
     eeg_data = []
     for _ in range(100):  # Retrieve 100 samples of EEG data
